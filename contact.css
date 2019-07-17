@@ -1,0 +1,62 @@
+
+section{
+    position: relative;
+    top:-68px;
+    left: 25%;
+    background-color: #e6e754;
+    width: 700px;
+    padding: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 2px black;
+}
+
+section form{
+    background-color: white;
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+}
+
+section select,section input{
+    width: 600px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+
+section input:focus{
+    
+    background-color:wheat;
+}
+
+ .en{
+    width: 100px;
+}
+.en:hover{
+    transition: 1s;
+     transform: scale(1.2);
+    cursor: pointer;
+    background-color: red;
+    text-transform: uppercase;
+}
+textarea{
+     width: 600px;
+    height: 200px;
+}
+#form{
+	text-align: center;
+	top: -50px;
+}
+
+#message_contact{
+	position: relative;
+    top:168px;
+    left: 25%;
+    background-color: yellow;
+    width: 700px;
+    padding: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 2px black;
+}

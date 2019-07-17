@@ -1,0 +1,122 @@
+body{
+	width: 100%;
+	height: 190%;
+	margin: 0;
+	padding: 0;
+	background-color: pink;
+}
+#container-header{
+	background: #e0c699;
+	width: 100%;
+	height: 100px;
+}
+header{
+	display: contents;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+section{
+    position: relative;
+    top:198px;
+    left: 25%;
+    background-color: coral;
+    width: 700px;
+    padding: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 2px black;
+}
+
+section form{
+    background-color: white;
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+}
+
+section select,section input{
+    width: 600px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+
+section input:focus{
+    
+    background-color:wheat;
+}
+
+ .en{
+    width: 100px;
+}
+.en:hover{
+    transition: 1s;
+     transform: scale(1.2);
+    cursor: pointer;
+    background-color: red;
+    text-transform: uppercase;
+}
+#form{
+	text-align: center;
+	
+}
+footer{
+	position: absolute;
+	width: 100%;
+	color: whitesmoke;
+	text-align: center;
+	background-color: black;
+	top:172%;
+	left: -5px;
+	right: -5px;
+}
+#check{
+	position: absolute;
+    left: 25%;
+    background-color: oldlace;
+	width: 700px;
+	height: 80px;
+	padding: 15px;
+	padding-left: 30px;
+	top: 37%;
+   
+}
+#a{
+	right: 100px;
+	padding-right: 20%;
+}
+#tab1{
+	position: relative;
+	width: 180px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+	right: 210px;
+	top: 31%;
+}
+#tab1 option{
+	left: 50px;
+	position: relative;
+	padding-left: 25px;
+}
+#tab2{
+	position: absolute;
+	width: 180px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+	left: 470px;
+	top: 26%;
+}
+#table{
+	position: absolute;
+	width: 180px;
+	height: 45px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 4px black;
+	padding-top: 10px;
+	left: 260px;
+	top: 26%;
+}

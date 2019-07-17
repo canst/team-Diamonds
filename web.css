@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:saddlebrown;
+}
+h1{
+    font-family: fantasy;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+.gras{
+    font-weight: bold;
+}
+
+section{
+    position: relative;
+    top:80px;
+    left: 25%;
+    background-color:coral;
+    width: 700px;
+    padding: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 2px black;
+}
+
+section form{
+    background-color:bisque;
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+}
+
+section select,section input{
+    width: 600px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+
+section input:focus{
+    
+    background-color:wheat;
+}
+
+ .en{
+    width: 100px;
+     left: 90px;
+}
+.en:hover{
+    transition: 1s;
+     transform: scale(1.2);
+    cursor: pointer;
+    background-color:beige;
+    text-transform: uppercase;
+}
+textarea{
+     width: 600px;
+    height: 200px;
+}

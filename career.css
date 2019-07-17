@@ -1,0 +1,168 @@
+@charset="utf-8"
+/***INDEX**/
+	/*****/
+body{
+	background-image: url(img/Schorge.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	
+}
+header img{
+	height: 60px;
+	float: left;
+}
+header h1{ 
+	font-family: cursive;
+	font-size: 3em;
+	color: red;
+}
+#contact{
+	float: right;
+	position: relative;
+	right: 0;
+	width: 300px;
+	height: 70px;
+	background-color: aliceblue;
+}
+section{
+	margin: 0;
+	padding: 0;
+	
+}
+article{
+	text-align: justify;
+	font-size: 1em;
+	padding: 20px;
+	width: 500px;
+	left: 50%px;
+	height: 100%;
+	background-color: coral;
+	border-radius: 15px;
+}
+
+
+#contformulaire{
+	position:relative;
+	transform: translate(-50%px,-50%px);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	left: 1800px;
+	top:30px;
+}
+#formulaires{
+	position:relative;
+	height:10rem;
+}
+/**********************************FORMULAIRE DU CV************************************************************/
+			
+
+
+			
+			fieldset{
+				border: 0;
+				margin-bottom: 0px;
+				text-align: center;
+				margin-left:0;
+				padding-left: 0;
+			}
+			
+			fieldset legend{
+				font-size: 18px;
+				font-weight: 900;
+				color: white;
+				text-transform: uppercase;
+				font-family: cursive;
+			}
+			
+			fieldset ol li{
+				-moz-border-radius:10px;
+				-webkit-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;	
+				list-style: none;
+				background-color: azure;
+				padding: 10px;
+				margin-bottom: 5px;
+				width: 400px;
+				font-family: cursive;
+				font-size: 12px;
+				font-weight: 100;
+			}
+			fieldset ol>label{
+				float: left;
+				width: 110px;
+				text-align: right;
+				padding-right: 0px;
+				
+			}
+		/*fieldset>textarea:focus-within{
+				color: yellow;*/
+					}
+			input[type="submit"]{
+				color: blueviolet;
+				display: flex;
+				width: 150px;
+				margin: 0 auto;
+				padding: 15px;
+				background-color: azure;
+				
+				-moz-border-radius:10px;
+				-webkit-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;
+				
+				font-family: "Times New	Roman", Times, serif;
+				font-size: 35px;
+							}
+/*
+		#submit{
+				position: relative;
+				top: 200px;
+				padding-left: 200px;
+				color: blueviolet;
+				width: 200px;
+				margin: 0 auto;
+				padding: 15px;
+			
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;
+				-o-border-radius:15px;
+				border-radius:15px;
+				font-family: cursive;
+				font-size: 25px;
+							}
+*/
+#submit:active{
+	color: blueviolet;}
+#submit:hover{
+	color: greenyellow;}
+#submit:visited{
+	color: yellow;}
+
+		
+#clear:active{
+	color: blueviolet;}
+#clear:hover{
+	color: greenyellow;}
+#clear:visited{
+	color: yellow;}
+
+
+			label{
+				position: relative;
+				left: -20px;
+				float: left;
+				width: 125px;
+				text-align: right;
+			}
+			
+#AS{
+	position: relative;
+	right:  90px;
+}
+
+		
+		
