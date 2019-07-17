@@ -1,3 +1,2 @@
 # team-Diamonds
- group work
-https://gist.github.com/canst/e97ab501f5f7509f159f1709fad09e25
+ this grooup work is about the creation of a website to promoting freelance entrepreneurship
