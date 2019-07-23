@@ -1,21 +1,64 @@
 <?php
-/*
-//connexion to DB
-$bdd = new PDO("mysql:host=localhost;dbname=bitdiamonds;charset=utf8","root","");
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//recording data from users into DB
-if(isset($_POST['login'])){ 
-$User=$_POST['Username'];
-$pwd=$_POST['pwd'];
 
-	$req = $bdd->prepare("INSERT INTO user_login SET  User= ?,pwd = ?");
-                $password = sha1($_POST['pwd']);
-                $req->execute([$User,$pwd]);
-      
-            $_SESSION['Username']=$_POST['Username'];
-            header("Location: index2.php") ;}  
-*/?>
+ $bdd = new PDO("mysql:host=localhost;dbname=bitdiamonds;charset=utf8","root","");
+	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+require_once 'scripts/session.php';
+
+if(isset($_POST['register'])){ 
+$lastname=$_POST['lastname'];
+$firstname=$_POST['firstname'];
+$Username=$_POST['Username'];
+$email=$_POST['email'];
+$password=$_POST['pwd'];
+$sexe=$_POST['sexe'];
+$user_type=$_POST['user_type'];
+$country=$_POST['country'];
+$comments=$_POST['commentaire'];
+
+ $check = mysql_query("select * from register where lastname='" . $_POST["lastname"]."' "
+		. ", firstname='" . $_POST['firstname'] . "' "
+		. ", Username='" . $_POST['Username'] . "' "
+		. ", email='" . $_POST['email'] . "' "
+		. ", password='" . $_POST['pwd'] . "' "
+		. ", sexe='" . $_POST['sexe'] . "' "
+		. ", user_type='" . $_POST['user_type'] . "' "
+		. ", country='" . $_POST['country'] . "' ", $connexion);
+		$select = mysql_fetch_array($check);
+		$lastname=$select['lastname'];
+		$firstname=$select['firstname'];
+		$Username=$select['Username'];
+		$email=$select['email'];
+		$password=$select['pwd'];
+		$sexe=$_POST['sexe'];
+		$user_type=$select['user_type'];
+		$country=$select['country'];
+		$comments=$select['commentaire'];
+		if(!$check){
+			echo "error in the process</br>";
+		echo "the error is probally related to " . mysql_error($connexion);		
+		}
+		else{
+         
+    if(empty($lastname) || empty($firstname)||empty($Username) || empty($email) || empty($password)|| empty($commentaire) ){
+        
+        $erreur="All the fields are required.";
+     } else{
+        
+        $req = $bdd->prepare("INSERT INTO register SET  lastname= ?, firstname= ?,Username=?, email= ?, password= ?,  sexe= ?, user_type=?, country= ?, comments = ?");
+                 $password = "._+#;6_A7!2[a-z]@%`&8-*7z".md5($_POST['pwd']);
+		$req->execute([$lastname,$firstname,$password,$sexe,$email,$user_type,$country, $comments]);
+        
+		 if (!empty($_POST['pwd'])){
+			$test = test_input($_POST['pwd']);
+		 if(!preg_match("/^[a-zA-Z]*$/",$test)){$erreur = "only letters and white space allowed";}}
+            $_SESSION['nom']=$_POST['nom'];
+            $_SESSION['email']=$_POST['email'];
+            header("Location: index2.php") ; 
+		}
+		}
+    }
+    ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" >
 <head>
@@ -31,6 +74,7 @@ $pwd=$_POST['pwd'];
 	<!--links css-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media_query_all.css">
 	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<!--links css-->
 	
@@ -39,53 +83,69 @@ $pwd=$_POST['pwd'];
 	<!--links JavaScript-->
 	
 </head>
-<body>
+<script>
+	var modal = document.getElementById('id02');
 
-<div id="container-header">
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+</script>
+	
+	<body>
+
+<div id="container-header" class="toggle_btn">
+	<span></span>
 		<h1 id="team">The&nbsp;Freelancer</h1>
 <header>
-		<div id="logo">
-		<figure class="fig_logo"><a href="index2.php" > <img src="img/Diamond6.jpg" alt="logo" class="logo" ></a>
+	<div class="menu">
+		<div id="logo-container">
+		<figure class="fig_logo re"><a href="index.php"> <img src="img/logo_freelancer.png" alt="logo" class="logo ra" ></a>
 		<figcaption id="slogan">when serving becomes duty</figcaption></figure>
 	</div>
-		<div id="announcesBar">
-			
+		<div id="loginBar">
+			<span></span>
+		</div>
+		<nav class="nav">
+			<ul>
+				<a href="index.php" id="home"><li>Home</li></a>
+				<a href="our_team.php"><li>Our&nbsp;Team</li></a>
+				<a href="signUp.php"><li>Services</li></a>
+				<a href="#" name="FAQ"><li>FAQ</li></a>
+			</ul>
+		</nav>
 	</div>
-	<nav>
-		<ul>
-		<a href="index.php" id="home"><li>Home</li></a>
-		<a href="our_team.php"><li>Our&nbsp;Team</li></a>
-        <a href="#services"><li>Services</li></a>
-		<a href="contact.php" name="contact"><li>Contact</li></a>
-	</ul>
-	</nav>
 </header>
 </div>
 
-<title>createAccount</title>
-
 	<link rel="stylesheet" href="css/w3.css" />
-<div class="w3-container w3-bar w3-card-4"> 
+<div id="signUp-container class="w3-container"> 
    <form class="form-create" action="index2.php" method="post">
-				<h3 class="w3-center top-login-title">Create an account</h3>
+				<h3 class="w3-center signUp-title">Create an account</h3>
 		<div class="login_form" id="register-div-topbar">
 			<div class="loginalert" id="register_message_area_topbar"></div>
 									
-				<input type="text" name="nom" id="user_name_register" required="true"class="w3-input w3-border" placeholder="Name">
+				<input type="text" name="lastname" id="user_name_register" class="inpts" required="true"class="w3-input w3-border" placeholder="Name">
 									
-				<input type="text" name="prenom" id="user_firstname_register" required="true" class="w3-input w3-border" placeholder="FirstName">
+				<input type="text" name="firstname" id="user_firstname_register" class="inpts"  required="true" class="w3-input w3-border" placeholder="FirstName">
 									
-				<input type="text" name="Username" id="user_Username_register" required="true" class="w3-input w3-border" placeholder="Username">
+				<input type="text" name="Username" id="user_Username_register" class="inpts"  required="true" class="w3-input w3-border" placeholder="Username">
 											
-				<input type="email" name="email" id="user_email_register" class="w3-input w3-border" placeholder="Email">
+				<input type="email" name="email" id="user_email_register" class="inpts"  class="w3-input w3-border" placeholder="Email">
 											
-				<input type="password" name="pwd" id="user_password" required="true" class="" placeholder="Password">
+				<input type="password" name="pwd" id="user_password" class="inpts"  required="true" class="" placeholder="Password">
 										  
-				<input type="password" name="pwd_r" id="user_password_retype" required="true" class="" placeholder="Confirm"><br> 
+				<input type="password" name="pwd_r" id="user_password_retype" 
+				<?php if (!empty($_POST['pwd_r'])){
+								$test = test_input($_POST['pwd_r']);
+							if(!preg_match($_POST['pwd'],$test)){$erreur = "password don't match";}}
+				?>
+				class="inpts"  required="true" class="" placeholder="Confirm"><br> <br>
 				
-				<input type="text" name="user_type" class="w3-border" placeholder="Buyer/Seller">
+				<input type="text" name="user_type" class="inpts"  placeholder="Buyer/Seller"><br>
 			
-			<select name="pays" size="1%"> 
+			<select name="country" class="inpts"  size="1%"> 
 				<option value="France" selected="selected">France </option>
 				<option value="Afghanistan">Afghanistan </option>
 				<option value="Afrique_Centrale">Afrique_Centrale </option>
@@ -339,16 +399,16 @@ $pwd=$_POST['pwd'];
 
 				<option value="Zambie">Zambie </option>
 				<option value="Zimbabwe">Zimbabwe </option>
-		</select>
+		</select><br>
 				 
-		<select name="sexe" class="sexe"><option>sex</option><option value="M">M</option><option value="F">F</option></select>
+		<select name="sexe" class="sexe inpts"><option>sex</option><option value="M">M</option><option value="F">F</option></select>
 			
           <p for="user_terms_register_topbar">
 				<input type="checkbox" required="true" name="terms" id="user_terms_register_topbar">
 				I agree with<a href="#"target="_blank" id="user_terms_register_topbar_link">terms&amp;conditions</a></p>
 			
      	<textarea name="commentaire" rows="3px" cols="40px" class="" placeholder="write your comments here" required></textarea><br>
-		<button class="w3-button reg w3-teal w3-center" id="wp-submit-register_topbar">Register</button>
+		<input class="w3-button reg w3-teal w3-center inpts" id="wp-submit-register_topbar" type="submit" name="register" value="register">
 			</div>
 	</form>
 	</div>
