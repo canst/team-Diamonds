@@ -1,14 +1,58 @@
-<link rel="stylesheet" href="css/style.css">
-    <?php include('header2.php');?>
-<div class="formulaire_article">
-    <h1 class="title_form">Article-Writting</h1>
-<form>
-   <p>Describe How you want the article looking to purchase-please be as detailed as possible:</p>
-        <textarea class="text_part" placeholder="Description"></textarea><br><br>
-    <div class="load-file">
-        <input type="file" >
-    </div>
+
+
+<?php include('header2.php')?>
     
+
+<div class="formulaire_article">
+    <h1 class="title_form"> <u> <strong>Article-Writting</strong></u></h1>
+<form>
+    <div class="first_select">
+         <h3>Type of Article:</h3>
+     <select>
+            <option>Article & Translation</option>
+            <option>Resumes & Cover letters</option>
+            <option>Technical Writin</option>
+            <option>Translation</option>
+            <option>Creating Writing</option>
+            <option>Research & Summuries</option>
+            <option>Sales Copy</option>
+            <option>Press Releases</option>
+            <option>Transcription</option>
+            <option>Legal Writing</option>
+            <option>Buisness Names & Slogan</option>
+            <option>Web Content</option>
+            <option>Scriptwriting</option>
+            <option> Book & eBook Writing</option>
+            <option>Speechwriting</option>
+            <option>Beta Reading</option>
+            <option>Proofreading & Editing</option>
+            <option>Other</option>
+        </select>
+    </div>
+    <div class="first_select">
+            
+    <h3>Topic</h3>
+    <select>
+            <option>Versatile</option>
+            <option>Internet & Technology</option>
+            <option> Health & Medical</option>
+            <option>Buisness, Finance & Law</option>
+            <option> Beauty & Fashion</option>
+            <option>Art & Culture</option>
+            <option>Retail & Ecommerce</option>
+            <option>Travel & Hospitality</option>
+            <option>Entrainment & Gaming</option>
+            <option>Food & Breverage</option>
+            <option>Lifestyle</option>
+            <option>Real Estate</option>
+            <option>News & Politics</option>
+            <option>Family & Eductio</option>
+            <option>Sports & Recreation</option>
+            <option> Auto & Transortation</option>
+        </select>
+    </div>
+    <div class="first_select">
+    </div>
          <hr>
     <div class="select_type_quality">
         <div class="type">
@@ -34,75 +78,102 @@
         </div>
     </div>
     <hr>
-    <p>Once you place order, when you like your service delivered?</p>
-    24 Hours <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;
-    3 Days <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    7 Days <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Anytime <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="time">
+        <div class="left-time-part">
+             <p>Delivered Time: </p>
+    <select>
+        <option> 24 Hours</option>
+        <option>3 Days</option>
+        <option>7 Days</option>
+        <option>2 Weeks</option> 
+        <option>3 Weeks</option> 
+        <option>1 month</option> 
+    </select>
+        </div>
+       
+    </div>
+    
+    <div class="time">
+        <p>Language</p>
+    <select>
+        <option>English</option>
+        <option>French</option>
+    </select>
+    </div>
+    <div class="time">
+        <div class="budget">
+            <p>Your Badget</p>
+    <input type="text" data-display-currency="USD" placeholder="Enter your Budget" class="budget_space">
+        </div>
+    </div>
+    
     <br><br>
     <hr>
-    <p>What is your budget for this services?</p>
-    <input type="text" data-display-currency="USD" placeholder="Enter your Budget">
-    <br> <br>
-    <div class="post">
-        <input type="submit" value="Post">
+    <p>Describe How you want the article looking to purchase-please be as detailed as possible:</p>
+        <textarea class="text_part" placeholder="Description"></textarea><br><br>
+    <div class="load-file">
+        <input type="file" >
     </div>
+    <hr>
+        <input type="submit" value="Order Now" class="post"><br><br>
 </form>
 </div>
-
-<div class="left-block">
-    <section class="section_article">
-       <h3>Type of Article are you looking for:</h3>
-    <p>
-       <input type="radio"> Article & Translation<br>
-       <input type="radio"> Resumes & Cover letters<br>
-       <input type="radio"> Technical Writin<br>
-       <input type="radio"> Translation<br>
-       <input type="radio"> Creating Writing<br>
-       <input type="radio"> Research & Summuries<br>
-       <input type="radio"> Sales Copy<br>
-       <input type="radio"> Press Releases<br>
-       <input type="radio"> Transcription<br>
-       <input type="radio"> Legal Writing<br>
-       <input type="radio"> Email Copy<br>
-       <input type="radio"> Buisness Names & Slogan<br>
-       <input type="radio"> Web Content<br>
-       <input type="radio"> Scriptwriting<br>
-       <input type="radio"> Book & eBook Writing<br>
-       <input type="radio"> Speechwriting<br>
-       <input type="radio"> Beta Reading<br>
-       <input type="radio"> Proofreading & Editing<br>
-       <input type="radio"> Other<br>
-    </p>
-</section>
-    <hr class="line_left_block">
-<section class="article-lan">
-    <h3>Language</h3>
-    English<br>
-    <input type="checkbox"><br><br>
-    French<br>
-    <input type="checkbox"><br><br>
-</section>
-<hr class="line_left_block">
+    <div class="display-demand">
+        <h2><u><strong>REQUESTERS</strong></u></h2>
+        
+    </div>
+    <br>
+    <figure>
+            <img src="img/artcl1.jpg" alt="article" id="img"> 
+            </figure>
     
-    <section class="right-block-article">
-        <h3>Topic</h3>
-        <input type="radio"> Versatile<br>
-        <input type="radio"> Internet & Technology<br>
-        <input type="radio"> Health & Medical<br>
-        <input type="radio"> Buisness, Finance & Law<br>
-        <input type="radio"> Beauty & Fashion<br>
-        <input type="radio"> Art & Culture<br>
-        <input type="radio"> Retail & Ecommerce<br>
-        <input type="radio"> Travel & Hospitality<br>
-        <input type="radio"> Entrainment & Gaming<br>
-        <input type="radio"> Food & Breverage<br>
-        <input type="radio"> Lifestyle<br>
-        <input type="radio"> Real Estate<br>
-        <input type="radio"> News & Politics<br>
-        <input type="radio"> Family & Eduction<br>
-        <input type="radio"> Sports & Recreation<br>
-        <input type="radio"> Auto & Transortation<br>
-    </section>
-</div>
-<?php include('footer.php');?>
+    <figure>
+            <img src="img/artcl1.jpg" alt="article" id="images"> 
+            </figure>
+    
+              <script>
+    var img =["img/t.jpg", "img/artcl1.jpg","img/artcl2.jpg", "img/artcl3.jpg",  "img/artcl4.jpg"];
+    var i=0;
+    var slider=document.getElementById('img');
+;
+        setInterval(function(){
+            slider.src=img[i];
+            i++;
+        if(i==img.length){i=0;}
+        }, 2000);
+    </script>
+    
+    
+    
+     <script>
+    var images =["img/t.jpg","img/IMG_8.jpg"];
+    var i=0;
+    var slider=document.getElementById('images');
+;
+        setInterval(function(){
+            slider.src=img[i];
+            i++;
+        if(i==img.length){i=0;}
+        }, 2000);
+    </script>
+    <?php include"footer.php" ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

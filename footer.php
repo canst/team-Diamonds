@@ -2,9 +2,9 @@
 <link type="text/css" rel="stylesheet" href="css/style.css">
 
 <!-- footer -->
-<footer>
+<footer class="footer">
 	<div class="footer-layer py-sm-5 pt-5 pb-3">
-		<div class="container py-md-3">
+		<div class="ft_container py-md-3">
 			<div class="footer-grid_section text-center">
 				<div class="footer-title ">
 					<a href="#home"><img src="img/logo_freelancer.png" alt="logo" class="logo" >The Freelancer</a>
@@ -29,7 +29,7 @@
 
 <!-- copyright -->
 <section class="copyright">
-	<div class="container py-4">
+	<div class="ft_container py-4">
 		<div class="row bottom">
 			<form action="alert.php" method="post">
 					<input type="email" name="email" placeholder="Subscribe To Our Newsletter" required="">
@@ -37,7 +37,7 @@
 				</form>
 			<div class="col-lg-6 copy-right p-0">
 				<p class="">© 2019 Freelancer. All rights reserved | Design by
-					<a href="#"> team_Diamonds</a>
+					<a href="#"> team_BIT-Diamonds</a>
 				</p>
 			</div>
 		</div>

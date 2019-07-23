@@ -10,10 +10,11 @@
 	<!--links css-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<!--links css-->
 	
 	
-	<div id="contain">
+	<div id="contain" class="">
 		<?php include('header2.php'); ?>
 	<div id="services">
 	<?php include('slider.php');?>

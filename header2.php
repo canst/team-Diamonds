@@ -1,34 +1,3 @@
-<?php
-				/*require_once("scripts/session.php");
-				require_once("scripts/authentification.php");
-				require_once("scripts/constantes.php");*/
-				require_once("scripts/fonctionBDD.php");					
-				/*$connexion = connexion(SERVEUR, NOM_SERVEUR, MOT_PASSE, NOM_BASE);
-				// si reception d'une information de déconnexion
-				if(isset($_POST['logout'])){
-					supprimerSession(session_id(), $connexion);
-				}
-				
-				$message=false;
-				// si reception d'un email et d'un mot de passe
-				// test si les logins sont vrais
-				if(isset($_POST['Username']) and isset($_POST['pwd'])){					
-					$requete = "SELECT User FROM user_login WHERE User='" . $_POST['Username'] . "' and pwd='" . md5($_POST['pwd']) . "'";
-					$resultat = mysql_query($requete, $connexion);
-					$utilisateur = mysql_fetch_array($resultat);
-					// les logins sont bons, on enregistre la session dans la BDD
-					if($utilisateur){
-						creerSession( session_id(), $_POST['Username'], $connexion);						
-					}
-					else{
-						$message=true;
-					}
-				}
-				
-				// on récupère la session dans la BD
-				$session = controlerSession(session_id(), $connexion);*/
-
-?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" >
@@ -55,10 +24,10 @@
 </head>
 <body>
 
-<div id="container-header">
+<div id="container-header" class="">
 		<h1 id="team">The&nbsp;Freelancer</h1>
-<header>
-		<div id="logo" class="">
+<header class="">
+		<div id="logo-container" class="">
 		<figure class="fig_logo re">
 		<a href="index2.php" > <img src="img/logo_freelancer.png" alt="logo" class="logo ra" ></a>
 		<figcaption id="slogan">when serving becomes duty</figcaption>
@@ -66,17 +35,31 @@
 	</div>
 		<div id="announcesBar">
 			
-			<form action="index.php" method="get" class="login-topbar">
-				<span>User:<?php if(isset($_POST['Username'])) echo $_POST['Username'] ;?></span>
-				<input type="submit" name="logout" value="logout">
+			<form action="index.php" method="post" class="login-topbar">
+				<span>User:
+				<?php while(isset($_POST['Username'])) 
+					{
+					 echo $_POST['Username'];
+					
+					}
+				?></span>
+				<input type="submit" name="logout" value="logout" class="w3-button w3-round w3-teal login_btn2">
 			</form>
 
 	</div>
 	<nav>
 		<ul>
-		<a href="#" id="home"><li>Home</li></a>
+		<a href="index2.php" id="home"><li>Home</li></a>
 		<a href="our_team.php"><li>Our&nbsp;Team</li></a>
-        <a href="#services"><li>Services</li></a>
+		<span class="dropdown">
+        <li  class="dropdown-btn">Services</li>
+			<span class="dropdown-content">
+				<a href="web.php">web-Design</a>
+				<a href="articles.php">Article writing</a>
+				<a href="TranslationPortal.php">Translation</a>
+				<a href="career.php">Career advise</a>
+			</span>
+		</span>
 		<a href="#" name="FAQ"><li>FAQ</li></a>
 	</ul>
 	</nav>

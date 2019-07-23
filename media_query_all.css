@@ -1,0 +1,64 @@
+/*================== Media Queries============== */
+/***********************************************************index.php****************/
+@media screen and (max-width: 991px) {
+	#team,#slogan{color:firebrick;}
+	#loginBar{padding-left:-300px;position: relative;right:900px;}
+	.login_btn{position:relative;left:-130px;}
+	.nav{position:relative; left:70px;padding-right:5px;right:200px;}
+	slider,.anime {width:100%;left:-400px;}
+	slide p{font-size:8px;}
+	#aboutus{width:100%;;height:100%;}
+	#aboutus p{width:600px;height:100%;padding-right:690px;margin-bottom:20px;margin-top:-10px;}
+	#container-header{background-color:yellow;}
+	.nav_team{position:relative;left:150px;}
+	#section1{ position: relative;width: 70%;height:100%;}
+	.team_picture_size{width: 30%;height:30%;border: 2px blue solid;}
+	#section2{background-color:  #b2bec3;display:flex;}
+}
+/*ecrans tablettes**/
+@media screen and (max-width: 767px) {
+	#container-header{background-color:yellow;}
+	#team{color:purple;width:1600px;position:relative;}
+	#logo-container{position:relative;}
+	.nav{position:relative; left:-100px;}
+	#loginBar,#announcesBar{position:absolute;left:-200px;padding-top:-10px;}
+	slider,.anime {width:500px;left:-420px;}
+	slide p{font-size:8px;}
+	#aboutus{width:750px;height:800px;}
+	#aboutus p{width:100%;height:100%;padding-right:830px;margin:2px;margin-bottom:20px;}
+	#signUp-container{position:relative;}
+}
+
+
+@media screen and (width: 575px) {
+	
+}
+
+@media screen and (max-width: 400px) {
+	.nav{position:relative; left:700px;}
+	#team{color:brown;width:150%;position:relative;}
+	slider,.anime {width:100%;height:100%;left:10px;font-size:5px;}
+	#aboutus{width:100%;height:100%;top:-15%;text-align:left;}
+	#abt_title{left:-300px;font-size:30px;}
+	#aboutus p{width:100%;padding-right:80px;margin-bottom:20px;font-size:8px;}
+	.footer{position:relative;margin-top:2%;}
+	
+	}
+
+@media (max-width: 676px){
+	.nav{position:relative; left:-10px;}
+	#team{color:yellow;width:150%;position:relative;;}
+	slider,.anime {position:relative;width:800px;height:100%;left:-400px;}
+	#aboutus{width:120%;height:100%;position:absolute;margin-top:-10%;}
+	#abt_title{ text-align:center;font-size:30px;padding-right:100px;}
+	#aboutus p{width:100%;padding-right:810px;margin-bottom:20px;font-size:10px;}
+	.footer{position:relative;margin-top:2%;}
+	#loginBar{margin-right:100%;position:relative;}
+	.login_btn{position:relative;margin-right:200%;}
+	.copy-right p a:hover{color: green;}
+	.copyright form{width:500xp;}
+	.copyright form input[type="email"] {width:250px;}
+	.copyright button.btn1 {width:150px;}
+	
+}
+

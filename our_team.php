@@ -26,14 +26,14 @@
 <div id="container-header">
 		<h1 id="team">The&nbsp;Freelancer</h1>
 <header>
-		<div id="logo">
-		<figure class="fig_logo re"><a href="index2.php" > <img src="img/logo_freelancer.png" alt="logo" class="logo ra" ></a>
+		<div id="logo-container">
+		<figure class="fig_logo re"><a href="index.php" > <img src="img/logo_freelancer.png" alt="logo" class="logo ra" ></a>
 		<figcaption id="slogan">when serving becomes duty</figcaption></figure>
 	</div>
-		<div id="announcesBar">
+		<div id="">
 			
 	</div>
-	<nav>
+	<nav class="nav_team">
 		<ul>
 		<a href="index.php" id="home"><li>Home</li></a>
 		<a href="our_team.php"><li>Our&nbsp;Team</li></a>

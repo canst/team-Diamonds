@@ -11,12 +11,12 @@
 	background: rgba(0, 0, 0, 0.8);
 	background:#3c3e00;
 	width: 100%;
-	height: 49px;
+	height: 70px;
 		}
 #container-header{
 	background: #aeffff;
 	width: 1600px;
-	height: 90px;
+	height: 100px;
 }
 header{
 	display: contents;
@@ -25,19 +25,79 @@ header{
 }
 #loginBar{
 	float: right;
+	padding-top:5px;
 	padding-right:100px;
-	position: relative;
-	top: -2px;
+	position: absolute;
+	top: 2px;
 }
+.login_btn{
+	position:relative;
+	width:140px;
+	height:40px;
+	padding-top:-10px;
+	left:1330px;
+}
+.login_btn2{
+	width:140px;
+	height:40px;
+	padding-top:-10px;
+	position:relative;
+}
+/****************************login.php****************************************/
+.login-form{																/**/		
+	position:relative;														/**/
+	width:500px;															/**/
+	height:500px;															/**/
+	top:50px;																/**/
+	left:500px;																/**/	
+	margin-top:50px;														/**/
+	margin-bottom:100px;													/**/
+	text-align:center;														/**/
+	padding-bottom:400px;													/**/
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);								/**/
+	border: 5px #7cfc00 solid;												/**/	
+    z-index: 1;																/**/
+	}																		/**/
+																			/**/
+.login-title{																/**/
+	color: #9d1170;															/**/
+	font-family: 'Tangerine', serif;										/**/
+    text-transform: capitalize;												/**/
+	font-size: 40px;														/**/
+																			/**/
+}																			/**/
+.inpt{																		/**/
+		padding-right:150px;												/**/
+		margin-top:30px;													/**/
+		height:60px;														/**/
+		width:auto;															/**/
+																			/**/
+	}																		/**/
+																		/**/
+	.tex{																	/**/
+			text-align:center;												/**/		
+			font-family:cursive;											/**/
+			font-size:50px;													/**/
+			padding-bottom:5px;												/**/
+			text-transform:capitalize;										/**/
+		}																	/**/
+																	/**/	
+																	/**/	
+																			/**/	
+/****************************login.php****************************************/
+
 #announcesBar{
 	float: right;
-	padding-right:100px;
+	padding-right:150px;
 	position: relative;
 	top: -2px;
+	font-family:cursive;
+	font-size:19px;
+	color:blue;
 		}
 
 
-#logo{
+#logo-container{
 	position:relative;
 	float: left;
 	width:350px;
@@ -45,7 +105,6 @@ header{
 }
 .logo{
 	position: relative;
-	margin-top: -5px;
 	width: 70px;
 	height: 70px;
 	border-radius:100%;
@@ -56,8 +115,9 @@ header{
 	top: -50px;
 	width: 250px;
 	font-family: cursive;
+	font-size:28;
 	font-size:17px;
-	color: brown;
+	color: black;
 }
 /*************ping logo***************/
 .re{
@@ -97,7 +157,7 @@ nav{
 	left: 700px;
 	font-family: fantasy;
 	font-size: 18px;
-	top: 40px;
+	top: 60px;
 	color: brown;
 }
 ul li{
@@ -119,8 +179,54 @@ ul a:hover{
 	transition:2s;
 	color: darkseagreen;}
 
+.dropdown-btn
+{
+    color: brown;
+    background-color: #aeffff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown-btn:hover{
+	background-color: beige;
+	box-shadow: 0px 0px 5px black;
+	cursor: pointer;
+	transition:2s;
+	color: darkseagreen;}
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color:#aeffff;
+    min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+.dropdown-content a
+{
+  color: brown;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover {background-color: green;}
+
+nav .dropdown .dropdown-btn a
+{
+    color: #aeffff;
+    text-decoration: none;
+}
 	
-/*<================INDEX.PHP CSS========================> */
+/*<============================================================================INDEX.PHP CSS=============================================================> */
 html{
 	width: 100%;
 	height: 100%;
@@ -135,7 +241,7 @@ html{
 	top:45px; 
 	width:1600px;
 	height:100%;
-	background-image: url(img/IMG_8.jpg);
+	background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 	color:blue;
 
 }
@@ -168,52 +274,11 @@ html{
 }
 
 
-
-/*
-.cont {
-  position: relative;
- 
-}
-
-.imgfluid {
-  opacity: 1;
-  display: block;
-  height: 240px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.cont:hover .image {
-  opacity: 0.3;
-}
-
-.cont:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: brown;
-  font-size: 14px;
-  padding: 16px 32px;
-}
-*/
-
-/*<================SLIDER.PHP CSS========================> */
+/*<=====================================================================SLIDER.PHP CSS================================================================> */
 
 		a{text-decoration: none; list-style: none;}
 		slider{
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			display: block;
 			width: 100%;
 			height: 50%;
@@ -223,6 +288,7 @@ html{
 		}
 		
 		slider > *{
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -235,26 +301,26 @@ html{
 		slide:nth-child(1){
 			left: 0%;
 			animation-delay: -1s;
-			background-image: url(img/articleW.jpg);
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			background-position: center;
 			background-size: cover;
 		}
 		slide:nth-child(2){
 			animation-delay: 2s;
-			background-image: url(img/translator.jpg);
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			background-position: center;
 			background-size: cover;
 		}
 		slide:nth-child(3){
 			animation-delay: 5s;
-			background-image: url(img/career1.jpg);
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			background-position: center;
 			background-size: cover;
 		}
 		slide:nth-child(4){
 			left: 0%;
 			animation-delay: 8s;
-			background-image: url(img/web2.jpg);
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
 			background-position: center;
 			background-size: cover;
 		}
@@ -277,8 +343,26 @@ html{
 			100% { left: 100%; width: 0%;}
 			
 		}
-		
-/*<================SIGNUP.PHP CSS========================> */
+		.anime > *{
+			background-image: url(img/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: #e6faff;
+			animation: slid 12s infinite;
+			overflow: hidden;
+		}
+		@keyframes slid{
+			0% {top: 100%;width: 100%;}
+			5% {top: 0%;}
+			25% {top: 0%;}
+			30% {top: -100%; width: 100%;}
+			/*30.0001% {top: -1000%; width: 100%;}*/
+			100% { top: 100%; width: 0%;}
+			
+		}
+/*<===========================================================SIGNUP.PHP CSS=====================================================================> */
 input![type=checkbox]{
 			width: 400px;
 			height: auto;
@@ -287,16 +371,34 @@ input![type=checkbox]{
 		
 		}
 .form-create{
-	position: relative;
-	width: 650px;
-	height: 500px;
-	top: 5px;
-	left: 30%;
-	border: 3px solid brown;
-	padding: 10px;
-	margin-top: 5px;
+	position:relative;														
+	width:700px;															
+	height:1000px;															
+	top:50px;	
+	left:400px;																	
+	margin-top:25px;
+	margin-bottom:100px;
+	text-align:center;													
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+	border: 5px #7cfc00 solid;	
+    z-index: 1;
 	
 }
+.inpts{
+		padding-right:150px;
+		margin-top:30px;
+		height:45px;
+		width:auto;
+	}
+.signUp-title{
+	color: #9d1170;
+	font-family: 'Tangerine', serif;
+    text-transform: capitalize;
+	font-size: 50px;
+	font-weight:600px;
+																			/**/
+}		
+	
 .form-create p{
 	line-height: 0;
 	font-size: 16px;
@@ -304,20 +406,22 @@ input![type=checkbox]{
 }
 		
 .reg{ 
+	width:250px;
 	padding: 10px;
 	font-family: cursive;
-	font-size: 16px;
+	font-size: 20px;
 	text-transform: uppercase;
 		}
 #return{
 	 font-size:1.5em;
-	
 	color:black ;
 	position:relative;
+	top:-20px;
+	left:50px;
 		}
 
 
-/*<================OUR_TEAM CSS========================> */
+/*<==============================================================OUR_TEAM CSS=======================================================> */
 #section1{
     position: relative;
     width: 100%;
@@ -404,9 +508,9 @@ input![type=checkbox]{
 	top: 250px;
 }
 
-/*<================FOOTER.PHP CSS========================> */
+/*<=======================================================================FOOTER.PHP CSS============================================================> */
 
-.container {
+.ft_container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -461,7 +565,7 @@ input![type=checkbox]{
 
 
 footer {
-    background: url(../images/footer.jpg)no-repeat center;
+    background: url(img/kailash-rai-196610-unsplash.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -517,11 +621,7 @@ ul.social_section_1info a span.fa {
     color: #ccc;
     line-height: 40px;
 }
-ul.links li {
-    display: inline-block;
-    padding: 0 10px;
-}
-ul.links  a ,.copy-right p,.copy-right p a{
+.copy-right p,.copy-right p a{
     color: #777;
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -532,12 +632,7 @@ ul.links  a ,.copy-right p,.copy-right p a{
 .copy-right {
     text-align: right;
 }
-.copy-right p a:hover{
-    color: whitesmoke;
-}
-.image {
-    width: 20%;
-}
+
 .copyright form {
     
     width: 623px;
@@ -582,3 +677,257 @@ ul.links  a ,.copy-right p,.copy-right p a{
 .text-right {
   text-align: right !important;
 }
+/*<=====================================================================================WEB.PHP CSS=================================================================> */
+
+/*<====================================================================================En_WEB.PHP CSS==================================================================> */
+
+/*<====================================================================================ARTICLE.PHP CSS====================================================================> */
+
+	.formulaire_article
+    {
+        margin-left: 30%;
+        margin-right: 35.9%;
+        border: #e17055 5px solid;
+        text-align: center;
+        background-color: #b2bec3;
+        margin-top: 1%;
+        border-radius: 10% 0% 10% 0%;
+        margin-bottom: 1%;
+        box-shadow: 5px 5px 5px 5px coral;
+    }
+    .header-services
+    {
+        background-color: white;
+    }
+    .load-file
+    {
+        display: inline-block;
+    }
+    .text_part
+    {
+        width: 95%;
+        height: 20%;
+    }
+    .load-file
+    {
+        padding-right: 40%;
+    }
+    .select
+    {
+        width: 120%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+    .post
+    {
+     width: 200px;
+    height: 50px;
+     background-color: darkorange;
+    border-radius: 8%;
+    }
+  
+   .line_left_block
+    {
+        margin-right: 90%;
+    }
+    
+    .select_type_quality
+    {
+        display: inline-block;
+    }
+    
+    .quality
+    {
+       margin-left: 40%;
+    }
+
+    .first_select
+    {
+        display: inline-block;
+    }
+    .display-demand
+    {
+        border: 5px #7cfc00 solid;
+        margin-left: 65%;
+        margin-top: -51%;
+        margin-right: 3%;
+        border-radius: 0% 10% 0% 10%;
+        box-shadow: 5px 5px 5px 5px #7cfc00;
+        position: absolute;
+        width: 30%;
+        height: 102%;
+        text-align: center;
+    }
+    #img
+    {
+        margin-top: -95%;
+    width: 400px;
+        height: 300px;
+    }
+    #images
+    {
+        margin-top: -58%;
+    width: 400px;
+        height: 300px; 
+    }
+    .time
+    {
+        display: inline-block;
+    }
+    
+    .left-time-part
+    {
+        margin-right: 8%;
+        margin-left: -30%;
+    }
+    
+    .budget_space
+    {
+    width: 140px;
+    height: 23px;
+    }
+    .budget
+    {
+        margin-left: 30%;
+    }
+
+/*<====================================================================================End_ARTICLES.PHP CSS==================================================================> */
+
+/*<====================================================================================career.PHP CSS==================================================================> */
+
+.articl{
+	text-align: justify;
+	font-size: 1em;
+	padding: 20px;
+	width: 700px;
+	margin-left:500px;
+	left: 400px;
+	height: 100%;
+	background-color: #d1fd9c;
+	border-radius: 20%;
+}
+/******************************************************************report.php****************************************/
+#aside_career{
+	position:relative;text-align:center;justify-content: center;background: #aeffff; left:200px; border-radius:12%; width:960px; height:860px; top:0px;"
+}
+/******************************************************************report.php****************************************/
+.title_advise{
+	color: #9d1170;font-family: 'Tangerine', serif;text-transform: capitalize;font-size: 55px;
+}
+
+#contformulaire{
+	position:relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	top:240px;
+}
+/**********************************FORMULAIRE FROM CAREER.PHP************************************************************/
+			
+
+
+			
+			fieldset{
+				border: 0;
+				margin-bottom: 0px;
+				text-align: center;
+				margin-left:0;
+				padding-left: 0;
+			}
+			
+			fieldset legend{
+				font-size: 18px;
+				font-weight: 900;
+				color: white;
+				text-transform: uppercase;
+				font-family: cursive;
+			}
+			
+			fieldset ol li{
+				-moz-border-radius:10px;
+				-webkit-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;	
+				list-style: none;
+				background-color: azure;
+				padding: 10px;
+				margin-bottom: 5px;
+				width: 400px;
+				font-family: cursive;
+				font-size: 12px;
+				font-weight: 100;
+			}
+			fieldset ol>label{
+				float: left;
+				width: 110px;
+				text-align: right;
+				padding-right: 0px;
+				
+			}
+		/*fieldset>textarea:focus-within{
+				color: yellow;*/
+					}
+			input[type="submit"]{
+				color: blueviolet;
+				display: flex;
+				width: 150px;
+				margin: 0 auto;
+				padding: 15px;
+				background-color: azure;
+				
+				-moz-border-radius:10px;
+				-webkit-border-radius:10px;
+				-o-border-radius:10px;
+				border-radius:10px;
+				
+				font-family: "Times New	Roman", Times, serif;
+				font-size: 35px;
+							}
+/*
+		#submit{
+				position: relative;
+				top: 200px;
+				padding-left: 200px;
+				color: blueviolet;
+				width: 200px;
+				margin: 0 auto;
+				padding: 15px;
+			
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;
+				-o-border-radius:15px;
+				border-radius:15px;
+				font-family: cursive;
+				font-size: 25px;
+							}
+*/
+#submit:active{
+	color: blueviolet;}
+#submit:hover{
+	color: greenyellow;}
+#submit:visited{
+	color: yellow;}
+
+		
+#clear:active{
+	color: blueviolet;}
+#clear:hover{
+	color: greenyellow;}
+#clear:visited{
+	color: yellow;}
+
+
+			label{
+				position: relative;
+				left: -20px;
+				float: left;
+				width: 125px;
+				text-align: right;
+			}
+			
+#AS{
+	position: relative;
+	right:  90px;
+}
+/*<====================================================================================career.PHP CSS==================================================================> */
